@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cts.menuMicroservice.models.MenuItem;
 import com.cts.menuMicroservice.services.MenuService;
 
-import lombok.extern.log4j.Log4j2;
 
-@Log4j2(topic = "Controller")
+
+
+
 @RestController
 public class MenuController {
 
@@ -22,18 +23,18 @@ public class MenuController {
 	
 	@GetMapping("/getAllItems")
 	public List<MenuItem> getAllItems() {
-	log.trace("getAllItems Triggered");
+	//logger.debug("getAllItems Triggered");
 		return menuServ.getAllItems();	
 	}
 	
 	@GetMapping("/getItemByName/{name}")
 	public MenuItem getItemByName(@PathVariable String name) {
-		log.trace("item with name: "+name+" is requested");
+		//log.debug("item with name: "+name+" is requested");
 		return menuServ.getByName(name);
 	}
 	@GetMapping("/getItemById/{id}")
 	public MenuItem getItemById(@PathVariable String id) {
-		log.trace("item with id: "+id+"is requested");
+		//log.trace("item with id: "+id+"is requested");
 		return menuServ.getById(id);
 	}
 	

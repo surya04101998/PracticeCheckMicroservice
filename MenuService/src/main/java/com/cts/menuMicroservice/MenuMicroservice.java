@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MenuMicroservice {
 
 	public static void main(String[] args) {
-		
 		SpringApplication.run(MenuMicroservice.class, args);
 		
 	}

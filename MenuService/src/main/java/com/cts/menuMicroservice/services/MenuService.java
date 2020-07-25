@@ -7,14 +7,18 @@ import org.springframework.stereotype.Service;
 
 import com.cts.menuMicroservice.models.MenuItem;
 
+import lombok.extern.log4j.Log4j2;
 
+@Log4j2
 @Service
 public class MenuService {
 	
 	
 	
 	public static List<MenuItem> generateList() {
-		
+			log.error("error for godsake");
+			log.info("asd");
+			log.debug("debug");
 			List<MenuItem> list=CSVparsingService.parseCSVtoBeanList();
 			return list;
 		
@@ -22,6 +26,7 @@ public class MenuService {
 	
 	static List<MenuItem> list=generateList();
 	public List<MenuItem> getAllItems(){
+		log.debug("aws");
 		return list;
 	}
 	
